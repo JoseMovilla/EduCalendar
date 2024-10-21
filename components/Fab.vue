@@ -1,1 +1,0 @@
-<v-fab icon="$vuetify"></v-fab>
