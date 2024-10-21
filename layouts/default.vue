@@ -2,7 +2,8 @@
   <div>
     <!-- Encabezado del Calendario Educativo -->
     <header>
-      <h1>Calendario Educativo</h1>
+      <h1>EDUCALENDAR</h1>
+      <p>Bienvenido al Calendario Educativo</p>
     </header>
 
 
