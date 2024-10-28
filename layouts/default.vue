@@ -2,10 +2,17 @@
   <div>
     <!-- Encabezado del Calendario Educativo -->
     <header>
-      <h1>EDUCALENDAR</h1>
-      <p>Bienvenido al Calendario Educativo</p>
+      <v-row align="center" justify="center">
+        <v-icon
+          color="white"
+          icon="mdi-school"
+          size="48px"
+          class="mr-2"
+        ></v-icon>
+        <h1 class="title">EDUCALENDAR</h1>
+      </v-row>
+      <h3 class="subtitle"> Organiza tus eventos y actividades en un solo lugar</h3>
     </header>
-
 
     <!-- Contenido de la Página -->
     <main>
@@ -18,6 +25,7 @@
     </footer>
   </div>
 </template>
+
 <script setup>
 </script>
 
@@ -29,6 +37,17 @@ header {
   text-align: center;
 }
 
+.title {
+  font-size: 32px; /* Ajusta el tamaño del título según sea necesario */
+  margin: 5px;
+}
+
+.subtitle {
+  justify-content: center;
+  text-align: center;
+  font-size: 12px; /* Ajusta el tamaño del título según sea necesario */
+  margin: 0px;
+}
 
 main {
   padding: 20px;
@@ -40,6 +59,5 @@ footer {
   color: white;
   text-align: center;
   padding: 10px;
-  margin-top: 20px;
 }
 </style>
