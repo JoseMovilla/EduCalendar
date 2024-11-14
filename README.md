@@ -1,4 +1,5 @@
 Integrantes: Alejandro Alvarez
+             Jose Movilla
 
 
 # Nuxt 3 Minimal Starter
