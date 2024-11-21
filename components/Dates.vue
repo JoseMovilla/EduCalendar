@@ -1,6 +1,5 @@
 <template>
     <div>
-      <h1>Fechas Importantes</h1>
       <div v-if="getDates.length">
         <ul>
           <li v-for="date in getDates" :key="date.id">

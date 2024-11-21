@@ -1,7 +1,5 @@
 <template>
-  <h1>Fechas Importantes</h1>
-  <!-- Renderizar las fechas directamente -->
-  <pre>{{ dates }}</pre>
+  <Dates />
 </template>
 
 <script setup>
