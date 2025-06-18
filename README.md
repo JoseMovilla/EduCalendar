@@ -1,156 +1,179 @@
-# Educalendar
-
-# Integrantes:
-Jose Movilla
-Alejandro Alvarez
-
-## Descripción
-**Educalendar** es una aplicación de calendario educativo diseñada para ayudar a los estudiantes y profesores a organizar y visualizar fechas importantes en el ámbito académico, como exámenes, entregas de proyectos, vacaciones y eventos especiales. Su interfaz intuitiva permite una fácil navegación y gestión de eventos, proporcionando una herramienta práctica para el seguimiento de actividades y el manejo del tiempo en un entorno educativo.
-
-## Tecnologías Utilizadas
-Este proyecto se desarrolló utilizando las siguientes tecnologías:
-- **Nuxt.js** - Framework de Vue.js para desarrollar aplicaciones web de forma rápida y eficiente.
-- **JavaScript** - Lenguaje de programación principal del proyecto.
-- **Vuetify** - Biblioteca de componentes de interfaz de usuario basada en Material Design para Vue.js.
-- **Pinia** - Sistema de gestión de estado para Vue.js, utilizado para manejar el estado global de la aplicación.
-
-## Instalación
-Sigue estos pasos para instalar el proyecto en un entorno local:
-
-```bash
+🧠 Documentación sobre: OVA: Entrena tu Memoria
+Integrantes:
+•	Eder Luis Perez Guzman
+•	Jose Javier Arrieta Delaossa
+________________________________________
+📝 Descripción
+“Entrena tu Memoria” es un Objeto Virtual de Aprendizaje (OVA) diseñado para fortalecer la memoria como habilidad cognitiva fundamental. A través de sesiones en vivo, actividades interactivas, principios neuroeducativos y recursos visuales, este OVA motiva a los usuarios a aprender de forma divertida, estructurada y personalizada. El diseño es responsivo y accesible, con un enfoque centrado en la experiencia de usuario para entornos educativos virtuales.
+________________________________________
+🧰 Tecnologías Utilizadas
+•	Nuxt.js – Framework de Vue.js para SSR y SPA.
+•	Vuetify 3 – Biblioteca de componentes con estilo Material Design.
+•	Pinia – Sistema de gestión de estado global.
+•	JavaScript – Lenguaje principal.
+•	Vite – Herramienta de construcción moderna utilizada por Nuxt.
+________________________________________
+⚙️ Instalación
 # Clonar el repositorio
-git clone https://github.com/usuario/Educalendar.git
+git clone https://github.com/usuario/ova-memoria.git
 
-# Navegar a la carpeta del proyecto
-cd Educalendar
+# Navegar al proyecto
+cd ova-memoria
 
-# Instalar las dependencias
+# Instalar dependencias
 npm install
-```
-
-## Configuración
-Si tu proyecto necesita variables de entorno u otra configuración adicional, agrégala en un archivo `.env` en la raíz del proyecto. Asegúrate de definir todas las variables necesarias antes de ejecutar la aplicación.
-
-## Uso
-Para iniciar el servidor de desarrollo y ver la aplicación en tu navegador:
-
-```bash
+________________________________________
+▶️ Uso
 # Ejecutar el servidor de desarrollo
 npm run dev
 
-# La aplicación estará disponible en: http://localhost:3000
-```
-
-## Estructura del Proyecto
-Aquí tienes una descripción de la estructura principal de carpetas y archivos:
-
-- `pages/` - Contiene las vistas principales de la aplicación.
-  - `index.vue` - Página de inicio que muestra la vista principal del calendario.
-  - `dates.vue` - Página para visualizar y administrar fechas importantes.
-- `components/` - Componentes reutilizables, como el componente de visualización de calendario.
-  - `Calendar.vue` - Componente para representar el calendario con las fechas destacadas.
-- `store/` - Gestión del estado global utilizando Pinia.
-  - `datesStore.js` - Store para manejar la información de las fechas importantes.
-- `plugins/` - Plugins de Vuetify y otras configuraciones.
-- `api/` - Endpoints de la API para obtener y actualizar datos de fechas educativas.
-
-## Funcionalidades Principales
-- **Visualización de calendario educativo**: Permite ver un calendario con fechas importantes resaltadas.
-- **Gestión de fechas**: Los usuarios pueden agregar, editar o eliminar fechas relevantes, como exámenes y eventos.
-- **Integración de API**: La aplicación se conecta a una API para almacenar y recuperar datos de eventos en tiempo real.
-
-## Ejemplos de Código
-
-Ejemplo de cómo acceder a los datos del store de fechas usando `useAsyncData`:
-
-```javascript
-// Obtener fechas desde el store
-await useAsyncData('dates', async () => {
-  await dateStore.fetchDates()
-  const dates = dateStore.dates
-})
-```
-
-## Contribución
-Si deseas contribuir al desarrollo de **Educalendar**, sigue estos pasos:
-
-1. Realiza un fork del repositorio.
-2. Crea una rama con tu funcionalidad (`feature/nueva-funcionalidad`).
-3. Envía un pull request con una descripción detallada de tus cambios.
-
-
-
-
-### Store de Fechas
-
-El store `dates.ts`, implementado con **Pinia**, se encarga de gestionar el estado global de las fechas importantes en la aplicación. Este store permite:
-
-- **Persistencia en LocalStorage**: Los datos de las fechas se almacenan en el almacenamiento local del navegador, permitiendo que las fechas se mantengan incluso después de recargar la página.
-- **Getters**: Ofrece dos getters, `getDates` y `getDate`, para obtener todas las fechas o una fecha específica.
-- **Acción `fetchDates`**: Esta acción utiliza `fetch` para obtener datos de fechas desde una API externa y los asigna al estado del store.
-
-#### Ejemplo de Uso:
-```typescript
-const dates = dateStore.dates // Obtener todas las fechas desde el store
-await dateStore.fetchDates() // Llamar a la API para actualizar las fechas
-
-
-```
-
-
-### API de Fechas
-
-El archivo `server/api/dates/index.get.ts` define un handler de API en **Educalendar** que proporciona las fechas importantes del proyecto. Esta API devuelve un arreglo de objetos de fechas, cada uno con:
-
-- `id`: Identificador único de la fecha.
-- `date`: Fecha en formato `YYYY-MM-DD`.
-- `description`: Descripción de la fecha, explicando su importancia (por ejemplo, inicio del proyecto, revisión intermedia, finalización).
-
-Este endpoint facilita la obtención de fechas desde el frontend, permitiendo que el store `dates.ts` las consuma para mostrarlas en el calendario.
-
-#### Ejemplo de Respuesta de la API:
-```json
-[
-  {
-    "id": 1,
-    "date": "2024-01-01",
-    "description": "Fecha de inicio del proyecto"
-  },
-  {
-    "id": 2,
-    "date": "2024-02-15",
-    "description": "Fecha de revisión intermedia"
-  },
-  {
-    "id": 3,
-    "date": "2024-03-30",
-    "description": "Fecha de finalización del proyecto"
+# Acceder a la app
+http://localhost:3000
+________________________________________
+📁 Estructura del Proyecto
+components/
+├── AddSession.vue     # Modal para añadir nuevas sesiones en vivo
+├── Dates.vue          # Listado de sesiones desde el store
+pages/
+├── index.vue          # Página de bienvenida y descripción del OVA
+├── dates.vue          # Página que muestra sesiones en vivo
+├── videos.vue         # Página con videos recomendados
+├── actividades.vue    # Página con tarjetas interactivas
+stores/
+├── dates.ts           # Store global para gestionar las fechas
+public/
+├── images/neurona.png
+├── images/cerebro.png
+layouts/
+├── default.vue        # Layout con imágenes laterales y navegación inferior
+________________________________________
+🧭 Páginas del OVA
+3.1 Inicio (index.vue)
+Descripción:
+La página principal del OVA actúa como carta de presentación del recurso. Está estructurada para dar una bienvenida visualmente atractiva y clara, destacando la finalidad del proyecto.
+Elementos clave:
+•	Encabezado con icono de cerebro (mdi-brain) y título centralizado.
+•	Subtítulo motivacional que introduce la temática.
+•	Diseño responsive con imágenes decorativas a ambos lados: neurona (izquierda) y cerebro (derecha).
+•	Contenedor principal en forma de tarjeta (v-sheet) con fondo blanco y sombra (elevation).
+•	Contenido introductorio: descripción del OVA, objetivos, principios neuroeducativos (presentados como chips de colores).
+3.2 Actividades (actividades.vue)
+Descripción:
+Página que contiene una serie de tarjetas interactivas, cada una correspondiente a una actividad didáctica enfocada en la memoria. Están enlazadas a plataformas externas donde se ejecutan los juegos o recursos.
+Características:
+•	Tarjetas con títulos descriptivos, íconos temáticos y explicación breve.
+•	Colores combinados en tonos lilas, rosas o lavanda, siguiendo la identidad visual del OVA.
+•	href externo en cada tarjeta con target="_blank" para abrir en nueva pestaña.
+•	Estilo tipo collage: uso de y para distribuir las tarjetas de manera estética.
+3.3 Videos (videos.vue)
+Descripción:
+Sección dedicada al refuerzo audiovisual. Contiene dos videos de YouTube insertados mediante iframe que tratan sobre técnicas de memoria y su importancia.
+Características:
+•	Cada video está contenido en una tarjeta con un título explicativo.
+•	Se usa para mantener proporción adaptable.
+•	Diseño centrado y ordenado en dos columnas o una sola columna en móviles.
+•	Los videos están seleccionados para complementar el contenido teórico del OVA.
+3.4 Fechas (En Vivo) (dates.vue)
+Descripción:
+Página que presenta una lista de sesiones sincrónicas (ficticias o reales), útiles para planificar talleres o encuentros virtuales. Los datos provienen de una API interna simulada en Nuxt.
+Características:
+•	Cada sesión aparece en una tarjeta con ícono, título, fecha, hora, descripción y un botón falso de “Unirse”.
+•	Si no hay datos, se muestra un mensaje de carga con v-progress-circular.
+•	Las fechas se obtienen del store Pinia con useDateStore().
+•	Admite expansión futura: integración con links reales de Zoom, Meet o LMS.
+3.5 Componente AddSession.vue
+Descripción:
+Este componente modular permite abrir un formulario emergente para que los usuarios (o el docente) ingresen nuevas sesiones. Simula el proceso de agendar eventos en vivo.
+Características:
+•	Utiliza v-dialog para generar un modal centrado.
+•	Incluye campos de entrada: título (text), fecha (date), hora (time) y descripción (textarea).
+•	Al hacer clic en “Guardar”, el evento se agrega a un array interno (puede expandirse para usar LocalStorage o persistencia real).
+•	Es un componente reutilizable, ya integrado en la página dates.vue.
+________________________________________
+Componentes Personalizados
+•	AddSession.vue: Formulario para ingresar nuevas sesiones con almacenamiento local.
+•	Dates.vue: Renderiza sesiones cargadas desde el store Pinia.
+•	Cards interactivas: Navegan hacia recursos externos o juegos de memoria.
+•	Layout responsive: Con imágenes laterales e íconos decorativos en móvil y escritorio.
+•	Barra de navegación inferior con íconos.
+________________________________________
+🚀 Funcionalidades Principales
+•	📆 Visualización de sesiones en vivo
+•	➕ Agregar nuevas sesiones mediante un formulario modal
+•	🎯 Acceso a actividades interactivas desde tarjetas
+•	🎬 Reproductores de video integrados desde YouTube
+•	📱 Interfaz adaptable a dispositivos móviles
+•	🧠 Integración de conceptos neuroeducativos
+________________________________________
+💾 Store de Fechas Pinia (stores/dates.ts)
+Este store maneja las fechas académicas desde la API:
+export const useDateStore = defineStore('dateStore', {
+  state: () => ({
+    dates: [],
+  }),
+  actions: {
+    async fetchDates() {
+      const res = await $fetch('/api/dates')
+      this.dates = res
+    }
   }
-]
-```
+})
+Ejemplo de uso:
+const dateStore = useDateStore()
+await useAsyncData('dates', () => dateStore.fetchDates())
+________________________________________
+🌐 API de Fechas (server/api/dates.ts)
+Simula la respuesta de sesiones académicas en vivo:
+export default defineEventHandler(() => {
+  return [
+    {
+      id: 1,
+      date: '2025-07-01',
+      time: '10:00',
+      title: 'Sesión de introducción a la memoria',
+      description: 'Exploración inicial sobre los tipos de memoria',
+      link: 'https://meet.example.com/sesion1'
+    },
+    ...
+  ]
+})
+________________________________________
+🧩 Componentes Clave
+components/AddSession.vue
+Permite agregar sesiones con título, fecha, hora y descripción. Muestra tarjetas interactivas de las nuevas sesiones creadas.
+components/Dates.vue
+Muestra las fechas desde el store con formato visual estructurado.
+________________________________________
+🧠 Actividades Interactivas
+La página actividades.vue presenta tarjetas clicables que redirigen a plataformas de ejercicios mentales:
+Actividad	Link
+Retos visuales y auditivos	https://www.cognifit.com/co/retos-mentales/bb-memory-hero
 
+Mnemotecnia	https://es.educaplay.com/recursos-educativos/2211154-mnemotecnia.html
 
-### Página de Fechas
+Simulación del olvido	https://www.juegos-mentales.com/juego/3D+Memory+Matching
 
-El archivo `pages/dates.vue` es un componente de página en **Educalendar** que muestra las fechas importantes almacenadas en el store. Este archivo:
+Diario de memoria	https://www.juegosdememoriagratis.com/adultos/02-medianos/m-verduras.html
 
-1. **Importa el store de fechas** usando `useDateStore()`, lo cual permite acceder a las fechas almacenadas.
-2. **Realiza una llamada asíncrona** a `fetchDates()` del store al utilizar `useAsyncData` para cargar las fechas en el estado antes de renderizar el componente.
-3. **Muestra las fechas en el DOM**, en un formato simple de `<pre>{{ dates }}</pre>`, para visualización y depuración inicial.
+Desafíos colaborativos	https://www.juegosdememoriagratis.com/adultos/03-dificiles/d-perros.html
 
-Este enfoque permite una carga de datos eficiente y reactiva desde el store.
+________________________________________
+📺 Página de Videos
+Incluye dos recursos integrados con <iframe> para fortalecer la comprensión:
+•	Entrenamiento mental con desafíos prácticos
+•	¿Por qué es importante ejercitar la memoria?
+________________________________________
+🧭 Navegación
+La app cuenta con una barra de navegación inferior fija con acceso directo a:
+•	Inicio
+•	Videos
+•	Actividades
+•	Sesiones en vivo
+Con iconografía Material Design y diseño responsivo.
+________________________________________
+🙌 Contribución
+1.	Haz fork del repositorio.
+2.	Crea una rama: feature/nueva-funcionalidad.
+3.	Envía un pull request con tu propuesta.
+________________________________________
 
-
-
-
-### Componente de Fechas
-
-El archivo `components/Dates.vue` es un componente en **Educalendar** que muestra una lista de fechas importantes en un formato organizado. Este componente:
-
-1. **Importa el store de fechas** usando `useDateStore()`, lo que permite acceder a los datos almacenados en el store de fechas.
-2. **Recupera las fechas** a través del getter `getDates` para mostrarlas dinámicamente en un listado `<ul>`.
-3. **Muestra cada fecha** en un formato de lista (`<li>`) que contiene el nombre y la descripción de cada evento importante, con un encabezado `<h2>` para la fecha y un párrafo `<p>` para la descripción.
-
-Este componente permite organizar y visualizar las fechas de una manera clara y estructurada en el proyecto.
-
- 

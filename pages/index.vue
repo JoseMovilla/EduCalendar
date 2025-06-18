@@ -1,3 +1,3 @@
 <template>
-    <Calendar />
-</template>
+    <CardEvents />
+  </template>

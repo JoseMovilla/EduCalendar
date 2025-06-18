@@ -3,12 +3,21 @@ import 'vuetify/styles'
 import { createVuetify } from 'vuetify'
 import { VCalendar } from 'vuetify/labs/VCalendar'
 
+import { aliases, mdi } from 'vuetify/iconsets/mdi'
+
 export default defineNuxtPlugin((app) => {
   const vuetify = createVuetify({
     components: {
       VCalendar,
     },
-    // ... otras configuraciones si son necesarias
+    icons: {
+      defaultSet: 'mdi',
+      aliases,
+      sets: {
+        mdi,
+      },
+    },
   })
+
   app.vueApp.use(vuetify)
 })

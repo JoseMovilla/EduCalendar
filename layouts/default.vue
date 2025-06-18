@@ -1,63 +1,109 @@
 <template>
-  <div>
-    <!-- Encabezado del Calendario Educativo -->
-    <header>
-      <v-row align="center" justify="center">
-        <v-icon
-          color="white"
-          icon="mdi-school"
-          size="48px"
-          class="mr-2"
-        ></v-icon>
-        <h1 class="title">EDUCALENDAR</h1>
-      </v-row>
-      <h3 class="subtitle"> Organiza tus eventos y actividades en un solo lugar</h3>
-    </header>
+  <v-app>
+    <div>
+      <!-- Encabezado -->
+      <header>
+        <v-row align="center" justify="center">
+          <v-icon color="white" icon="mdi-brain" size="48px" class="mr-2" />
+          <h1 class="title">OVA: “Entrena tu Memoria”</h1>
+        </v-row>
+        <h3 class="subtitle">
+          Desarrolla tu memoria mientras aprendes de forma divertida.
+        </h3>
+      </header>
 
-    <!-- Contenido de la Página -->
-    <main>
-      <slot />
-    </main>
+      <!-- Contenido principal -->
+      <main>
+        <v-container>
+          <v-row align="center" justify="center">
+            <!-- Imagen izquierda -->
+            <v-col cols="12" md="2" class="text-center d-none d-md-flex">
+              <v-img
+                src="/images/neurona.png"
+                alt="Ilustración memoria izquierda"
+                max-width="340"
+                max-height="340"
+                contain
+              />
+            </v-col>
 
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2024 Universidad de Córdoba</p>
-    </footer>
-  </div>
+            <!-- Contenido dinámico -->
+            <v-col cols="12" md="8">
+              <v-sheet class="pa-6" elevation="3" rounded="xl" color="white">
+                <slot />
+              </v-sheet>
+            </v-col>
+
+            <!-- Imagen derecha -->
+            <v-col cols="12" md="2" class="text-center d-none d-md-flex">
+              <v-img
+                src="public/images/cerebro.png"
+                alt="Ilustración memoria derecha"
+                max-width="340"
+                max-height="340"
+                contain
+              />
+            </v-col>
+          </v-row>
+        </v-container>
+      </main>
+
+      <!-- Barra de navegación inferior flotante -->
+      <v-bottom-navigation
+        app
+        color="#a1207a"
+        elevation="12"
+        class="mx-auto rounded-xl transition-all"
+        style="max-width: 500px; bottom: 20px; position: fixed; left: 0; right: 0;"
+      >
+        <v-btn to="/" value="inicio">
+          <v-icon>mdi-home</v-icon>
+          <span>Inicio</span>
+        </v-btn>
+        <v-btn to="/videos" value="videos">
+          <v-icon>mdi-video</v-icon>
+          <span>Videos</span>
+        </v-btn>
+        <v-btn to="/actividades" value="actividades">
+          <v-icon>mdi-brain</v-icon>
+          <span>Actividades</span>
+        </v-btn>
+        <v-btn to="/dates" value="envivo">
+          <v-icon>mdi-calendar-clock</v-icon>
+          <span>En vivo</span>
+        </v-btn>
+      </v-bottom-navigation>
+    </div>
+  </v-app>
 </template>
 
-<script setup>
-</script>
 
 <style scoped>
 header {
-  background-color: #1f8301;
+  background-color: #a1207a;
   color: white;
   padding: 20px;
   text-align: center;
 }
 
 .title {
-  font-size: 32px; /* Ajusta el tamaño del título según sea necesario */
+  font-size: 32px;
   margin: 5px;
 }
 
 .subtitle {
-  justify-content: center;
   text-align: center;
-  font-size: 12px; /* Ajusta el tamaño del título según sea necesario */
-  margin: 0px;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 main {
-  padding: 20px;
-  background-color: #f0f0f0;
+  padding: 40px 20px;
+  background-color: #f8ebf4;
+  padding-bottom: 120px; /* espacio para que no tape la nav */
 }
 
-footer {
-  background-color: #1f8301;
-  color: white;
-  text-align: center;
-  padding: 10px;
+.v-bottom-navigation {
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 </style>
